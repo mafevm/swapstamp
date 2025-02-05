@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff2e63;
+  --primary-light: #ff2b61;
+  --primary-muted: #ff295f;
+  --primary-dark: #ff275e;
+  --secondary: #2ecc71;
+}
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary-light transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors duration-300;
+  }
+}
+
