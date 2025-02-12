@@ -1,7 +1,7 @@
 "use client"
 
-import Home from "../src/app/page"
+import { LanguageProviderWrapper } from "../src/components/LanguageProviderWrapper"
 
 export default function SyntheticV0PageForDeployment() {
-  return <Home />
+  return <LanguageProviderWrapper />
 }

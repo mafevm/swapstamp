@@ -1,15 +1,12 @@
 import type { Metadata } from "next"
-import { Manrope } from "next/font/google"
+import { LanguageProvider } from "../contexts/LanguageContext"
 import "./globals.css"
 import type React from "react"
-import { LanguageProvider } from "../contexts/LanguageContext"
-
-const manrope = Manrope({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SwapStamp - Digital Loyalty Cards for Small Businesses",
+  title: "SwapStamp - Tarjetas de Fidelización Digital para Pequeños Negocios",
   description:
-    "Replace traditional loyalty cards with a digital, hassle-free solution. Increase customer retention and save costs with SwapStamp.",
+    "Reemplaza las tarjetas de fidelización tradicionales con una solución digital sin complicaciones. Aumenta la retención de clientes y ahorra costos con SwapStamp.",
 }
 
 export default function RootLayout({
@@ -18,10 +15,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <LanguageProvider>
-        <body className={manrope.className}>{children}</body>
-      </LanguageProvider>
+    <html lang="es">
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   )
 }

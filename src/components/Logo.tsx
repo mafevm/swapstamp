@@ -1,15 +1,14 @@
-import type React from "react";
+import type React from "react"
 
-const Logo: React.FC = () => {
+const Logo: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <img
       src="https://raw.githubusercontent.com/mafevm/swapstamp/main/209753750.svg"
       alt="SwapStamp Logo"
-      width="150"
-      height="40"
+      className={className}
     />
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo
 
