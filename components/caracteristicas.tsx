@@ -25,26 +25,26 @@ const caracteristicas = [
 
 export default function Caracteristicas() {
   return (
-    <section id="caracteristicas" className="container space-y-16 py-24 md:py-32">
+    <section id="caracteristicas" className="container space-y-12 py-16 px-4 md:py-24">
       <div className="mx-auto max-w-[58rem] text-center">
-        <h2 className="font-bold text-4xl leading-[1.1] sm:text-5xl md:text-6xl">Características Principales</h2>
-        <p className="mt-6 text-xl text-muted-foreground">
+        <h2 className="font-bold text-2xl leading-[1.2] sm:text-3xl md:text-4xl">Características Principales</h2>
+        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
           Descubre cómo Swapstamp simplifica la fidelización de clientes para tu negocio.
         </p>
       </div>
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
         {caracteristicas.map((caracteristica) => (
           <div
             key={caracteristica.nombre}
-            className="relative overflow-hidden rounded-2xl border-2 border-primary/10 bg-background p-8 transition-all hover:border-primary/30 hover:shadow-lg"
+            className="relative overflow-hidden rounded-2xl border-2 border-primary/10 bg-background p-4 sm:p-6 transition-all hover:border-primary/30 hover:shadow-lg"
           >
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-primary/10 p-3">
-                <caracteristica.icono className="h-8 w-8 text-primary" />
+            <div className="flex items-center gap-3">
+              <div className="rounded-full bg-primary/10 p-2">
+                <caracteristica.icono className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               </div>
-              <h3 className="font-bold text-xl">{caracteristica.nombre}</h3>
+              <h3 className="font-bold text-base sm:text-lg">{caracteristica.nombre}</h3>
             </div>
-            <p className="mt-4 text-muted-foreground">{caracteristica.descripcion}</p>
+            <p className="mt-2 text-sm text-muted-foreground">{caracteristica.descripcion}</p>
           </div>
         ))}
       </div>
