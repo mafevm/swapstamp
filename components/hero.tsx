@@ -1,30 +1,34 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
+import ParticleBackground from "./particle-background"
 
 export default function Hero() {
   return (
-    <section className="container flex min-h-[calc(100vh-4rem)] max-w-screen-xl flex-col items-center justify-center space-y-8 py-12 px-4 md:py-24 text-center">
-      <div className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          Fideliza clientes con
-          <br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-pink-500 to-purple-500">
-            sellos digitales
-          </span>
-        </h1>
-        <p className="mx-auto max-w-[42rem] text-base leading-normal text-muted-foreground sm:text-lg md:text-xl">
-          Swapstamp reemplaza las tarjetas de fidelización tradicionales con una solución digital fácil y rápida para
-          pequeños negocios.
-        </p>
-      </div>
-      <div className="flex flex-col w-full sm:flex-row sm:justify-center gap-4">
-        <Button size="lg" className="bg-primary text-white hover:bg-primary/90 text-base px-6 py-4 w-full sm:w-auto">
-          Prueba Gratis
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-        <Button variant="outline" size="lg" className="text-base px-6 py-4 w-full sm:w-auto">
-          Ver Demo
-        </Button>
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-swapstamp-white">
+      <ParticleBackground />
+      <div className="container max-w-screen-xl px-4 py-12 md:py-24 relative z-10">
+        <div className="space-y-6 text-center">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-swapstamp-black">
+            Tu negocio, sin rollos, <br />
+            <span className="animated-gradient">más smart.</span>
+          </h1>
+          <p className="mx-auto max-w-[42rem] text-xl leading-normal text-swapstamp-gray-dark sm:text-2xl">
+            Haz que tus clientes vuelvan una y otra vez con recompensas digitales que funcionan de verdad.
+          </p>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Button
+            size="lg"
+            className="bg-swapstamp-fuchsia text-white hover:bg-swapstamp-black transition-all duration-300 text-xl px-8 py-6 group relative overflow-hidden"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              <Sparkles className="w-5 h-5 animate-pulse" />
+              Empieza Gratis Ahora
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
+            </span>
+            <span className="absolute inset-0 bg-gradient-to-r from-swapstamp-fuchsia via-purple-600 to-swapstamp-fuchsia bg-[length:200%_100%] animate-shimmer" />
+          </Button>
+        </div>
       </div>
     </section>
   )

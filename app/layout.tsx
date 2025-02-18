@@ -1,14 +1,16 @@
+import type React from "react"
 import "./globals.css"
-import { Inter } from "next/font/google"
+import { Poppins } from "next/font/google"
 import type { Metadata } from "next"
-import type React from "react" // Added import for React
 
-const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
 
 export const metadata: Metadata = {
-  title: "Swapstamp - Fidelización Digital Simple",
-  description:
-    "Swapstamp reemplaza las tarjetas de fidelización tradicionales con sellos digitales para pequeños negocios.",
+  title: "SwapStamp - Digitaliza tu negocio fácil y rápido",
+  description: "SwapStamp te ofrece herramientas digitales simples y efectivas para hacer crecer tu negocio.",
     generator: 'v0.dev'
 }
 
@@ -18,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <body className={inter.className}>{children}</body>
+    <html lang="es" className={poppins.className}>
+      <body>{children}</body>
     </html>
   )
 }

@@ -21,11 +21,11 @@ export default function Navbar() {
             className="h-8 w-auto"
           />
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center gap-8">
           <nav
             className={`fixed top-16 left-0 w-full bg-background p-4 transition-all duration-300 ease-in-out md:static md:w-auto md:bg-transparent md:p-0 ${isMenuOpen ? "block" : "hidden md:block"}`}
           >
-            <ul className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+            <ul className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8">
               <li>
                 <Link
                   href="#caracteristicas"
@@ -46,9 +46,12 @@ export default function Navbar() {
               </li>
             </ul>
           </nav>
-          <div className="flex items-center space-x-4">
-            <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
-              Empezar Gratis
+          <div className="flex items-center space-x-4 md:space-x-6">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-swapstamp-fuchsia via-purple-600 to-swapstamp-fuchsia hover:bg-gradient-to-l text-white px-6 py-2 transition-all duration-500 bg-[length:200%_100%] bg-right hover:bg-left"
+            >
+              Empieza Gratis
             </Button>
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

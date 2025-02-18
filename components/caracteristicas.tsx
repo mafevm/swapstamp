@@ -1,25 +1,30 @@
-import { Smartphone, CloudIcon as CloudCheck, TrendingUp, Zap } from "lucide-react"
+import { Zap, Smartphone, Rocket, Users, Clock } from "lucide-react"
 
 const caracteristicas = [
   {
-    nombre: "100% Digital",
-    descripcion: "Sin tarjetas físicas, todo en el smartphone de tus clientes.",
-    icono: Smartphone,
-  },
-  {
-    nombre: "Fácil de Usar",
-    descripcion: "Interfaz intuitiva para negocios y clientes.",
+    nombre: "Gratis para empezar",
+    descripcion: "Sin trampas. Sin historias.",
     icono: Zap,
   },
   {
-    nombre: "En la Nube",
-    descripcion: "Accede desde cualquier dispositivo, en cualquier momento.",
-    icono: CloudCheck,
+    nombre: "2 minutos y listo",
+    descripcion: "Lo configuras más rápido que un café.",
+    icono: Clock,
   },
   {
-    nombre: "Analíticas Simples",
-    descripcion: "Conoce el impacto de tu programa de fidelización.",
-    icono: TrendingUp,
+    nombre: "Cero instalaciones",
+    descripcion: "Funciona en cualquier móvil, sin apps.",
+    icono: Smartphone,
+  },
+  {
+    nombre: "Atrae más clientes",
+    descripcion: "Y haz que vuelvan una y otra vez.",
+    icono: Users,
+  },
+  {
+    nombre: "Crece con nosotros",
+    descripcion: "Empieza con rewards, llega a lo más alto.",
+    icono: Rocket,
   },
 ]
 
@@ -27,24 +32,22 @@ export default function Caracteristicas() {
   return (
     <section id="caracteristicas" className="container space-y-12 py-16 px-4 md:py-24">
       <div className="mx-auto max-w-[58rem] text-center">
-        <h2 className="font-bold text-2xl leading-[1.2] sm:text-3xl md:text-4xl">Características Principales</h2>
-        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-          Descubre cómo Swapstamp simplifica la fidelización de clientes para tu negocio.
-        </p>
+        <h2 className="font-bold text-3xl leading-[1.2] sm:text-4xl md:text-5xl">Sin rollos, puro negocio</h2>
+        <p className="mt-4 text-xl text-muted-foreground sm:text-2xl">SwapStamp es la chispa que tu negocio necesita</p>
       </div>
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {caracteristicas.map((caracteristica) => (
           <div
             key={caracteristica.nombre}
-            className="relative overflow-hidden rounded-2xl border-2 border-primary/10 bg-background p-4 sm:p-6 transition-all hover:border-primary/30 hover:shadow-lg"
+            className="relative overflow-hidden rounded-2xl border-2 border-primary/10 bg-background p-6 transition-all hover:border-primary/30 hover:shadow-lg"
           >
-            <div className="flex items-center gap-3">
-              <div className="rounded-full bg-primary/10 p-2">
-                <caracteristica.icono className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+            <div className="flex items-center gap-4">
+              <div className="rounded-full bg-primary/10 p-3">
+                <caracteristica.icono className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="font-bold text-base sm:text-lg">{caracteristica.nombre}</h3>
+              <h3 className="font-bold text-xl">{caracteristica.nombre}</h3>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">{caracteristica.descripcion}</p>
+            <p className="mt-2 text-lg text-muted-foreground">{caracteristica.descripcion}</p>
           </div>
         ))}
       </div>

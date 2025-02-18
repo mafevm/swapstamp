@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -50,6 +53,16 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        swapstamp: {
+          fuchsia: "#FF2E63",
+          black: "#000000",
+          gray: {
+            dark: "#666666",
+            DEFAULT: "#999999",
+            light: "#FAFAFA",
+          },
+          white: "#FFFFFF",
         },
       },
       borderRadius: {
