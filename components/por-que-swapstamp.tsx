@@ -1,25 +1,33 @@
-import { Ticket, Smartphone, Zap, Rocket } from "lucide-react"
+import { QrCode, Smartphone, Zap, Users } from "lucide-react"
 
 const razones = [
   {
-    titulo: "Más stamps, más clientes",
-    descripcion: "Tus clientes suman stamps y vuelven. Así de simple.",
-    icono: Ticket,
+    titulo: "Digitaliza tu tarjeta de sellos en minutos",
+    descripcion: "Convierte tu programa de recompensas en una experiencia 100% digital, sin complicaciones.",
+    icono: QrCode,
+    numero: "1️⃣",
+    pin: "📌",
   },
   {
-    titulo: "Sin apps, sin descargas",
-    descripcion: "SwapStamp funciona en cualquier móvil, sin complicaciones.",
+    titulo: "Tus clientes acumulan recompensas fácilmente",
+    descripcion: "Solo escanean un código QR y suman puntos en cada compra.",
     icono: Smartphone,
+    numero: "2️⃣",
+    pin: "📌",
   },
   {
-    titulo: "Automático desde el día 1",
-    descripcion: "Lo activas en minutos y listo, sin dolores de cabeza.",
+    titulo: "Automático y sin esfuerzo",
+    descripcion: "Actívalo rápido y deja que funcione por sí solo.",
     icono: Zap,
+    numero: "3️⃣",
+    pin: "📌",
   },
   {
-    titulo: "Empieza fácil, crece sin límites",
-    descripcion: "Hoy recompensas digitales, mañana lo que tu negocio necesite.",
-    icono: Rocket,
+    titulo: "Conéctate más allá de la compra",
+    descripcion: "Abre nuevas formas de entender, hacer crecer tu negocio y conectar con tus clientes.",
+    icono: Users,
+    numero: "4️⃣",
+    pin: "📌",
   },
 ]
 
@@ -28,10 +36,10 @@ export default function PorQueSwapstamp() {
     <section id="por-que-swapstamp" className="container space-y-12 py-16 px-4 md:py-24 bg-white">
       <div className="mx-auto max-w-[58rem] text-center">
         <h2 className="font-bold text-3xl leading-[1.2] sm:text-4xl md:text-5xl text-swapstamp-black">
-          ¿Por qué SwapStamp?
+          ¿Por qué elegir SwapStamp?
         </h2>
         <p className="mt-4 text-xl text-swapstamp-gray-dark sm:text-2xl">
-          Porque digitalizar tu negocio debería ser pan comido
+          Digitaliza tu programa de fidelización de forma sencilla y efectiva
         </p>
       </div>
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
